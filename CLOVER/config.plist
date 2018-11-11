@@ -664,73 +664,89 @@
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAbGQ==</data>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
-				<key>#AAPL00,override-no-connect</key>
-				<data></data>
-				<key>#AAPL00,override-no-edid</key>
-				<data></data>
-				<key>## @0 LVDS-&gt;DP</key>
-				<string></string>
+				<key>## patch0</key>
+				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
+				<key>## patch1</key>
+				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
 				<key>#framebuffer-con0-enable</key>
 				<integer>1</integer>
 				<key>#framebuffer-con0-type</key>
-				<data>AAQAAA==</data>
-				<key>## @1 HDMI</key>
-				<string></string>
+				<data>
+				AAQAAA==
+				</data>
 				<key>#framebuffer-con1-enable</key>
 				<integer>1</integer>
-				<key>#framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
 				<key>#framebuffer-con1-flags</key>
-				<data>hwEAAA==</data>
+				<data>
+				hwEAAA==
+				</data>
 				<key>#framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>## @2 HDMI</key>
-				<string></string>
+				<data>
+				EgAAAA==
+				</data>
+				<key>#framebuffer-con1-type</key>
+				<data>
+				AAgAAA==
+				</data>
 				<key>#framebuffer-con2-enable</key>
 				<integer>1</integer>
-				<key>#framebuffer-con2-type</key>
-				<data>AAgAAA==</data>
 				<key>#framebuffer-con2-flags</key>
-				<data>hwEAAA==</data>
+				<data>
+				hwEAAA==
+				</data>
 				<key>#framebuffer-con2-pipe</key>
-				<data>EgAAAA==</data>
-				<key>## @3 HDMI</key>
-				<string></string>
+				<data>
+				EgAAAA==
+				</data>
+				<key>#framebuffer-con2-type</key>
+				<data>
+				AAgAAA==
+				</data>
 				<key>#framebuffer-con3-enable</key>
 				<integer>1</integer>
-				<key>#framebuffer-con3-type</key>
-				<data>AAgAAA==</data>
 				<key>#framebuffer-con3-flags</key>
-				<data>hwEAAA==</data>
+				<data>
+				hwEAAA==
+				</data>
 				<key>#framebuffer-con3-pipe</key>
-				<data>EgAAAA==</data>
-				<key>## patch0</key>
-				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
+				<data>
+				EgAAAA==
+				</data>
+				<key>#framebuffer-con3-type</key>
+				<data>
+				AAgAAA==
+				</data>
 				<key>#framebuffer-patch0-enable</key>
 				<integer>1</integer>
 				<key>#framebuffer-patch0-find</key>
-				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
+				<data>
+				ChMDAAAABgAAAAAAAAAAAA==
+				</data>
 				<key>#framebuffer-patch0-replace</key>
-				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
-				<key>## patch1</key>
-				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
+				<data>
+				DxMDAAAABgAAAAAAAAAAAA==
+				</data>
 				<key>#framebuffer-patch1-enable</key>
 				<integer>1</integer>
 				<key>#framebuffer-patch1-find</key>
-				<data>CgsDAAAHBgADAAAABAAAAA==</data>
+				<data>
+				CgsDAAAHBgADAAAABAAAAA==
+				</data>
 				<key>#framebuffer-patch1-replace</key>
-				<data>DwsDAAAHBgADAAAABAAAAA==</data>
+				<data>
+				DwsDAAAHBgADAAAABAAAAA==
+				</data>
+				<key>#hda-gfx</key>
+				<string>onboard-1</string>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAAbGQ==
+				</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>
 				<key>#layout-id</key>
 				<integer>3</integer>
-				<key>#PinConfigurations</key>
-				<data></data>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -921,13 +937,21 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<string>IONVMeFamily Preferred Block Size 0x10 -&gt; 0x01 (c) Pike R. Alpha implemented by syscl adapted for 10.13.x-10.14 by Ricky</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
+				<data>
+				9sEQD4VBAQAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
 				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
+				<data>
+				9sEBD4VBAQAA
+				</data>
 			</dict>
 		</array>
 	</dict>
