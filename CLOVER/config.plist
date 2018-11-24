@@ -630,7 +630,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>nv_disable=1 dart=0 -cdfon -igfxnohdmi</string>
+		<string>dart=0 nvda_drv=1 -cdfon -igfxnohdmi</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -785,6 +785,10 @@
 				</dict>
 			</array>
 		</dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
